@@ -72,7 +72,7 @@ def parse_string(string):
 
 
 # Example usage
-input_string = transcribe('first_recorded_audio_ilaccent.wav')
+input_string = transcribe('first_recorded_audio_withnewrec.wav')
 parsed_words = parse_string(input_string)
 print(parsed_words)
 print(input_string)
