@@ -18,7 +18,6 @@ def save_audio_to_file(audio_data):
 
 
 st.title("Record the words you heard in the previous page's recording.")
-st.write('When the icon turns yellow, recording has begun.')
 
 audio_data = st_audiorec()
 col1, col2, col3 = st.columns(3)
