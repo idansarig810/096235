@@ -5,7 +5,7 @@ from pages.llama_utils import get_rating
 st.title("Whrite one clear and coherent sentence")
 q_12 = st.text_input(label='sentence', placeholder='type your answer here', label_visibility='hidden', value=None)
 
-get_buttons('main.py', 'pages/q2.py')
+get_buttons('pages/q11.py', 'main.py')
 
 st.divider()
 if q_12 is not None:

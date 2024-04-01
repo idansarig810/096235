@@ -30,7 +30,7 @@ with col1:
 with col3:
     one_next_button = st.button('Next', key='one_next_button')
     if one_next_button:
-        st.switch_page('pages/q12')
+        st.switch_page('pages/q12.py')
 
 # Check if audio data is recorded
 if audio_data:
