@@ -13,4 +13,4 @@ _ , col2 = st.columns(2)
 with col2:
     intro_next_button = st.button('Next', key='intro_button')
     if intro_next_button:
-        st.switch_page('pages/one.py')
+        st.switch_page('pages/q1.py')
