@@ -1,1 +1,2 @@
 streamlit-audiorec==0.1.3
+openai-whisper==20231117
