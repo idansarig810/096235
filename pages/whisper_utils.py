@@ -2,7 +2,7 @@ import whisper
 import torch
 
 # Load the model (make sure to specify the correct model size if needed)
-MODEL_PATH = "tiny.pt"
+MODEL_PATH = "pages/tiny.pt"
 model = whisper.load_model(MODEL_PATH)
 
 # Load your custom weights into the model
@@ -61,7 +61,7 @@ def transcribe(path, lang=None):
 
     result = whisper.decode(model, mel, options)
     text = result.text
-    return text
+    return parse_string(text)
 
 
 def parse_string(string):
@@ -69,10 +69,3 @@ def parse_string(string):
     words = [word.strip() for word in string.replace(",", " ").split()]
 
     return words
-
-
-# Example usage
-input_string = transcribe('first_recorded_audio_withnewrec.wav')
-parsed_words = parse_string(input_string)
-print(parsed_words)
-print(input_string)
