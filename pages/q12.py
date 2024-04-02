@@ -2,7 +2,7 @@ import streamlit as st
 from pages.utils import get_buttons
 from pages.llama_utils import get_rating
 
-st.title("Whrite one clear and coherent sentence")
+st.title("Write one clear and coherent sentence")
 q_12 = st.text_input(label='sentence', placeholder='type your answer here', label_visibility='hidden', value=None)
 
 get_buttons('pages/q11.py', 'main.py')
