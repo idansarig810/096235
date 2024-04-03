@@ -2,9 +2,16 @@
 from openai import OpenAI
 
 client = OpenAI(
-    api_key="LL-uvd0NHioJELc4uWo0eBPpzKUk7bm1DjeuPhNOkbQZSFwCN5aBuGwgOrkACUFpjj4",
+    api_key="LL-nqJPAFKqNT6rdVeCHHLy7Q3iXDMO0k9G6vmj6pfTId1btvi23V47WQ1d475iBmEj",
     base_url="https://api.llama-api.com"
 )
+
+# def empty_response():
+#     response = client.chat.completions.create()
+#     print(response)
+#
+
+
 def get_rating(sentence):
     print(sentence)
     response = client.chat.completions.create(
@@ -33,15 +40,14 @@ def get_rating(sentence):
                                         
                                         "Rating 1: A sentence that makes no sense at all, lacking coherence or logical "
                                         "connection between its components.."
-                                        
-                                        
-                                        
+
                                         f"### {sentence}"}
         ]
 
     )
+    print(response.choices)
     rating = response.choices[0].message.content
     print(rating)
-    if len(rating)>1:
-        return get_rating(sentence)
+    # if len(rating)>1:
+    #     return get_rating(sentence)
     return rating
