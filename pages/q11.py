@@ -32,8 +32,10 @@ with col3:
     if one_next_button:
         st.switch_page('pages/q12.py')
 
+st.audio(audio_data, format='audio/wav')
+
 # Check if audio data is recorded
-if audio_data is not None:
+if audio_data:
     # st.audio(audio_data, format='audio/wav')
     with col2:
         # Save the audio data to a WAV file
