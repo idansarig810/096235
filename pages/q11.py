@@ -33,7 +33,7 @@ with col3:
         st.switch_page('pages/q12.py')
 
 # Check if audio data is recorded
-if audio_data:
+if audio_data is not None:
     # st.audio(audio_data, format='audio/wav')
     with col2:
         # Save the audio data to a WAV file
