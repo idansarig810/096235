@@ -1,16 +1,12 @@
-# This example is the new way to use the OpenAI lib for python
 from openai import OpenAI
+import sys
+
+apiKey = sys.argv[1]
 
 client = OpenAI(
-    api_key="LL-nqJPAFKqNT6rdVeCHHLy7Q3iXDMO0k9G6vmj6pfTId1btvi23V47WQ1d475iBmEj",
+    api_key=apiKey,
     base_url="https://api.llama-api.com"
 )
-
-# def empty_response():
-#     response = client.chat.completions.create()
-#     print(response)
-#
-
 
 def get_rating(sentence):
     print(sentence)
@@ -45,9 +41,5 @@ def get_rating(sentence):
         ]
 
     )
-    print(response.choices)
     rating = response.choices[0].message.content
-    print(rating)
-    # if len(rating)>1:
-    #     return get_rating(sentence)
     return rating

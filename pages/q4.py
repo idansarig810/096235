@@ -11,6 +11,7 @@ st.divider()
 
 today = datetime.date.today()
 today_month = today.month
+# the following is according to the seasons in israel.
 if 11 >= today_month >= 9:
     season = 'Autumn'
 elif 8 >= today_month >= 6:

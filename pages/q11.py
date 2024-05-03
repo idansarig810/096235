@@ -22,6 +22,7 @@ st.title("Record the words you heard in the previous page's recording.")
 audio_data = st_audiorec()
 col1, col2, col3 = st.columns(3)
 
+# this logic does not allow for the user to go back to the recording (currently the user can bypass this easily)
 prev_page = get_last_page()
 with col1:
     one_prev_button = st.button('Previous', key='one_prev_button')
@@ -32,11 +33,8 @@ with col3:
     if one_next_button:
         st.switch_page('pages/q12.py')
 
-st.audio(audio_data, format='audio/wav')
-
 # Check if audio data is recorded
 if audio_data:
-    # st.audio(audio_data, format='audio/wav')
     with col2:
         # Save the audio data to a WAV file
         save_button = st.button("Save Recording")
