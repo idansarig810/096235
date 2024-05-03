@@ -28,6 +28,7 @@ As this application is in its early stages, the following features are not yet i
 
 ## Getting Started
 
-1. Clone the repository to your local machine.
+1. Clone the repository to your local machine - [link](https://github.com/idansarig810/096235)
 2. Install the necessary dependencies.
 3. Run the application.
+
